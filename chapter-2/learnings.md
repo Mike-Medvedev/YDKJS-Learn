@@ -12,10 +12,10 @@
 ## Values
 
 - The fundemental unit of information in a program is a value, values are data
-- In Javascript there are two types of values, <em>primitive</em> and <em>object.</em>
+- In Javascript there are two types of values, <strong>primitive</strong> and <strong>object.</strong>
 - Primitive Types Include: string, number, bigint, boolean, undefined, null, symbol
 - Values embedded in a program are called literals. ("Hi, I am Mike") is a string literal as its not assigned to a variable and used inline
-- Values can be embedded or <em>Interpolated</em> into strings using back ticks \`. (\`Hi I am ${Mike}\`) is called string interpolation
+- Values can be embedded or <strong>Interpolated</strong> into strings using back ticks \`. (\`Hi I am ${Mike}\`) is called string interpolation
 
 ## Arrays and Objects
 
