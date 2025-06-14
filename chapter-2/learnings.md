@@ -45,7 +45,7 @@
 - functions are also keywords used for variables, they declare a function which has var like behavior and also the functions parameter is declared within the functions scope
 - the catch clause also defines a variable and the paramter is catch(err) is block scoped like let
 
-##
+## Functions
 
 - Functions in javascript are objects
 - They can be defined in a function declaration like function hello(){} or as a function expression var func = function hello(){}
@@ -79,3 +79,26 @@
 - In Javascript, coercion is converting a value of one type to another, like a string "42" to a number 42
 - When using loose equality, == converts types of the right handside to match the left before comparing, 42 == "42" // true
 - When using comparisons like <, >, >=, <= Javascript will coerce the types before checking, so 500 < "1000" is true
+
+## How We Organize in JS
+
+- Theres two ways to organize code (data and behavior), classes and modules
+
+### Classes
+
+- Classes are the Object Oriented way to package data and behavior, the classes provided a custom "type" which define a data structure and methods to operate on such behaviors
+- These classes support inheritance with extends which allow other classes to inherit a parents class publicly exposed members and methods via this keyword
+- Sub classes can also define an identical function name as the parent and override it with a new definition (Polymorphism)
+- In OOP, a child class calls super() to inherit the parent class it extends
+- This works because a childs constructor calls super() which creates an instance of the parent on the "this" keyword, adding all the parents public data and methods
+- Then the childs public data and methods get appended on that same "this" instance, overriding any identical methods.
+
+### Modules
+
+- Modules in javascript are another way to package data and behavior, exposing only public apis, but different syntax than classes
+- Originally modules were just creation functions that returned an object which other modules could use
+- In 2015/16 ESM modules were defined which replaced manually creating module factory functons with the imports/exports keywords
+- Essentially each file is treated as a module, so no creation function is needed, and the exports keyword exposes whatever the module wants to expose
+- The imports keyword instatiates that module in another module and can use its public api, but nothing outside of the exported data/methods can be exposed in the imported module
+- CommonJS created modules that use require and module.exports
+- UMD and AMD are other module variations, that still required the script tag order to work properly
