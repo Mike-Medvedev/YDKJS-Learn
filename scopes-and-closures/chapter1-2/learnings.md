@@ -23,4 +23,14 @@
 - Two variables with the same name can exist in different scopes, the program will only use however the variable in that scope, not possible reference the outer scope variable unless you use window.variable but that is looked down on
 - Having an identical variable in a different scope is known as "shadowing" the outer scope variable
 
-## Chater 4
+## Chater 4- Global Scope
+
+- Global Scope is the topmost scope that exists in a JS environment and contains all the Javascript Built-ins, WebAPI's like fetch() and more.
+- The global scope is different per environemnt like the Browser (global is the window) or Node (global is global)
+- JS Exposes all its built ins like String() Object() primitives natives, namespaces in the global object
+- The environemnt hosting the Js Engine does as well like console and the DOM, etc
+- When a JS file is sent to a JS environment, depending on the module system, top level variables are treated in a certain way
+- In ESM modules, each file is a module and essentially wraps its contents in a "module-global-scope" so var-declared variables are not intefering with the global scope
+- you can declare variables in the global scope onto the global object and that is accessible by all
+- in node you have commonJs and recently ESM, which are different ways to handle modules, commonJS uses require and module.exports, and also wraps modules in a function and exposes variables like \_\_dirname, and require() as a "module-global", theres no window but theres a globals object
+- WEb workers are a way to run code in a seperate thread in the browser that does not block the main thread, its got a seperate Global Object with slightly different api's and no built in dom
