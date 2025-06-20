@@ -15,3 +15,12 @@
 - each different scope has its own instance of a "Scope Manager"
 - each scope when executed has a list of all the variables associated with the scope
 - during compiling the AST into bytecode, the compiler asks the scope manager if he has seen each variable, if yes move on if no move outwards (parent scope if not global) and check if the variable is there
+
+## Chapter 3
+
+- Scope is actually pre determined and included in the AST so during compilation variables are associated with their scope buckets
+- Scope starts at the inner most scope of a program and moves outward, called the scope chain, which are buckets containing variables
+- Two variables with the same name can exist in different scopes, the program will only use however the variable in that scope, not possible reference the outer scope variable unless you use window.variable but that is looked down on
+- Having an identical variable in a different scope is known as "shadowing" the outer scope variable
+
+## Chater 4
