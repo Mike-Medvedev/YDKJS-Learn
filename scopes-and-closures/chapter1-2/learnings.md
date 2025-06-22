@@ -23,7 +23,7 @@
 - Two variables with the same name can exist in different scopes, the program will only use however the variable in that scope, not possible reference the outer scope variable unless you use window.variable but that is looked down on
 - Having an identical variable in a different scope is known as "shadowing" the outer scope variable
 
-## Chater 4- Global Scope
+## Chapter 4- Global Scope
 
 - Global Scope is the topmost scope that exists in a JS environment and contains all the Javascript Built-ins, WebAPI's like fetch() and more.
 - The global scope is different per environemnt like the Browser (global is the window) or Node (global is global)
@@ -34,3 +34,14 @@
 - you can declare variables in the global scope onto the global object and that is accessible by all
 - in node you have commonJs and recently ESM, which are different ways to handle modules, commonJS uses require and module.exports, and also wraps modules in a function and exposes variables like \_\_dirname, and require() as a "module-global", theres no window but theres a globals object
 - WEb workers are a way to run code in a seperate thread in the browser that does not block the main thread, its got a seperate Global Object with slightly different api's and no built in dom
+
+## Chapter 5- Variable Life Cycle
+
+- Variables in javascript have special properties when declared
+- When a variable is declared, the indentifiers are added to the instance of its scope
+- these variables are hoisted and initialized based on var, let, an const
+- Var variables are hoisted to the top of the scope no matter what position they are declared
+- var variables then are initialized with undefined so they are not in temporal dead zone (TDZ)
+- let variables are hoisted but block scoped but are added to the TDZ until actually declared
+- const and let variables cannot be re declared
+- const cannot be re assigned
